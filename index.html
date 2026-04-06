@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sajay & Amrusha · April 29, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Gilda+Display&family=Lato:wght@300;400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ░░ LOADER ░░ -->
+<div id="loader">
+  <div class="loader-wrap">
+    <svg class="loader-botanical" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#7aab8a"/>
+          <stop offset="100%" stop-color="#d4a853"/>
+        </linearGradient>
+      </defs>
+      <!-- Outer ring -->
+      <circle class="ring r1" cx="150" cy="150" r="128" fill="none" stroke="url(#lg1)" stroke-width="0.8"/>
+      <circle class="ring r2" cx="150" cy="150" r="118" fill="none" stroke="#d4a853" stroke-width="0.4" stroke-dasharray="4 8"/>
+      <!-- Leaf sprigs at 12 positions -->
+      <g class="botanicals">
+        <g transform="rotate(0 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(30 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(60 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(90 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(120 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(150 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(180 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(210 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(240 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(270 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(300 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <g transform="rotate(330 150 150)"><ellipse cx="150" cy="26" rx="5" ry="10" fill="#7aab8a" opacity="0.7"/></g>
+        <!-- small blossoms -->
+        <g transform="rotate(15 150 150)"><circle cx="150" cy="30" r="3.5" fill="#f2c4ce" opacity="0.8"/></g>
+        <g transform="rotate(75 150 150)"><circle cx="150" cy="30" r="3.5" fill="#f2c4ce" opacity="0.8"/></g>
+        <g transform="rotate(135 150 150)"><circle cx="150" cy="30" r="3.5" fill="#f2c4ce" opacity="0.8"/></g>
+        <g transform="rotate(195 150 150)"><circle cx="150" cy="30" r="3.5" fill="#f2c4ce" opacity="0.8"/></g>
+        <g transform="rotate(255 150 150)"><circle cx="150" cy="30" r="3.5" fill="#f2c4ce" opacity="0.8"/></g>
+        <g transform="rotate(315 150 150)"><circle cx="150" cy="30" r="3.5" fill="#f2c4ce" opacity="0.8"/></g>
+      </g>
+      <!-- Centre monogram circle -->
+      <circle cx="150" cy="150" r="38" fill="none" stroke="#d4a853" stroke-width="0.7" opacity="0.6"/>
+      <circle cx="150" cy="150" r="30" fill="rgba(212,168,83,0.07)"/>
+    </svg>
+    <p class="loader-script">Sajay & Amrusha</p>
+    <p class="loader-date">April 29 · 2026</p>
+  </div>
+</div>
+
+<!-- ░░ FIREFLY CANVAS ░░ -->
+<canvas id="fireflies" aria-hidden="true"></canvas>
+
+<!-- ░░ HERO ░░ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+
+  <!-- Moon -->
+  <div class="moon" aria-hidden="true">
+    <div class="moon-core"></div>
+    <div class="moon-ring"></div>
+  </div>
+
+  <!-- Botanical corner art -->
+  <div class="corner-art corner-tl" aria-hidden="true">
+    <svg viewBox="0 0 160 160" width="160" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,150 Q10,10 150,10" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.5"/>
+      <path d="M10,150 Q30,80 80,60" fill="none" stroke="#7aab8a" stroke-width="0.7" opacity="0.4"/>
+      <ellipse cx="80" cy="60" rx="12" ry="22" fill="#7aab8a" opacity="0.35" transform="rotate(-35 80 60)"/>
+      <ellipse cx="55" cy="95" rx="10" ry="18" fill="#7aab8a" opacity="0.3" transform="rotate(-55 55 95)"/>
+      <ellipse cx="110" cy="38" rx="8" ry="16" fill="#7aab8a" opacity="0.3" transform="rotate(-15 110 38)"/>
+      <circle cx="82" cy="42" r="5" fill="#f2c4ce" opacity="0.6"/>
+      <circle cx="112" cy="25" r="4" fill="#f2c4ce" opacity="0.5"/>
+      <circle cx="50" cy="78" r="3.5" fill="#d4a853" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="corner-art corner-tr" aria-hidden="true">
+    <svg viewBox="0 0 160 160" width="160" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)">
+      <path d="M10,150 Q10,10 150,10" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.5"/>
+      <path d="M10,150 Q30,80 80,60" fill="none" stroke="#7aab8a" stroke-width="0.7" opacity="0.4"/>
+      <ellipse cx="80" cy="60" rx="12" ry="22" fill="#7aab8a" opacity="0.35" transform="rotate(-35 80 60)"/>
+      <ellipse cx="55" cy="95" rx="10" ry="18" fill="#7aab8a" opacity="0.3" transform="rotate(-55 55 95)"/>
+      <ellipse cx="110" cy="38" rx="8" ry="16" fill="#7aab8a" opacity="0.3" transform="rotate(-15 110 38)"/>
+      <circle cx="82" cy="42" r="5" fill="#f2c4ce" opacity="0.6"/>
+      <circle cx="112" cy="25" r="4" fill="#f2c4ce" opacity="0.5"/>
+      <circle cx="50" cy="78" r="3.5" fill="#d4a853" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-pre reveal">Together with their families</p>
+    <div class="hero-names reveal">
+      <span class="name-script n1">Sajay</span>
+      <div class="name-divider">
+        <svg viewBox="0 0 220 40" width="200" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="20" x2="70" y2="20" stroke="#d4a853" stroke-width="0.7" opacity="0.6"/>
+          <path d="M80,20 Q90,8 100,20 Q110,32 120,20 Q130,8 140,20" fill="none" stroke="#d4a853" stroke-width="1.2" opacity="0.8"/>
+          <line x1="150" y1="20" x2="220" y2="20" stroke="#d4a853" stroke-width="0.7" opacity="0.6"/>
+          <circle cx="110" cy="20" r="2.5" fill="#d4a853" opacity="0.9"/>
+        </svg>
+      </div>
+      <span class="name-script n2">Amrusha</span>
+    </div>
+    <p class="hero-invite reveal">invite you to witness their union</p>
+    <div class="hero-date-block reveal">
+      <span class="hd-day">Sunday</span>
+      <span class="hd-sep">·</span>
+      <span class="hd-date">29 April 2026</span>
+      <span class="hd-sep">·</span>
+      <span class="hd-place">Macherla</span>
+    </div>
+    <div class="hero-scroll reveal">
+      <span class="scroll-text">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+
+  <!-- Silhouette treeline -->
+  <div class="treeline" aria-hidden="true">
+    <svg viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+      <defs>
+        <linearGradient id="treeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0a2818"/>
+          <stop offset="100%" stop-color="#0a1628"/>
+        </linearGradient>
+      </defs>
+      <!-- Dense forest silhouette -->
+      <path d="M0,220 L0,160 Q20,140 40,160 Q50,120 70,100 Q90,80 110,100 Q130,60 160,40 Q190,20 210,40 Q240,10 270,30 Q300,0 330,20 Q360,5 390,25 Q420,0 450,15 Q480,30 500,10 Q530,0 560,18 Q590,5 620,20 Q650,0 680,15 Q710,30 730,8 Q760,0 790,18 Q820,5 850,22 Q880,0 910,18 Q940,8 970,25 Q1000,5 1030,20 Q1060,0 1090,18 Q1120,8 1150,28 Q1180,10 1210,30 Q1240,15 1270,35 Q1300,20 1330,42 Q1360,25 1390,48 Q1420,60 1440,80 L1440,220 Z" fill="url(#treeGrad)"/>
+      <!-- Second layer lighter -->
+      <path d="M0,220 L0,180 Q30,160 60,180 Q80,150 110,135 Q140,120 160,140 Q190,115 220,130 Q250,105 280,125 Q310,100 350,120 Q380,95 420,115 Q460,90 500,112 Q540,95 580,115 Q620,98 660,118 Q700,100 740,122 Q780,105 820,128 Q860,110 900,132 Q940,115 980,138 Q1020,120 1060,145 Q1100,128 1140,155 Q1180,140 1220,162 Q1260,148 1300,168 Q1340,155 1380,175 L1440,185 L1440,220 Z" fill="#0a1f14" opacity="0.7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ░░ VINE DIVIDER ░░ -->
+<div class="vine-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 60" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 Q100,10 200,30 Q300,50 400,30 Q500,10 600,30 Q700,50 800,30 Q900,10 1000,30 Q1100,50 1200,30" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.35"/>
+    <g opacity="0.5">
+      <ellipse cx="150" cy="18" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(-20 150 18)"/>
+      <ellipse cx="350" cy="42" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(20 350 42)"/>
+      <ellipse cx="600" cy="18" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(-20 600 18)"/>
+      <ellipse cx="850" cy="42" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(20 850 42)"/>
+      <ellipse cx="1050" cy="18" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(-20 1050 18)"/>
+      <circle cx="250" cy="30" r="3" fill="#f2c4ce" opacity="0.5"/>
+      <circle cx="480" cy="30" r="3" fill="#d4a853" opacity="0.5"/>
+      <circle cx="720" cy="30" r="3" fill="#f2c4ce" opacity="0.5"/>
+      <circle cx="960" cy="30" r="3" fill="#d4a853" opacity="0.5"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ░░ COUNTDOWN ░░ -->
+<section class="section-countdown" id="countdown">
+  <div class="section-inner">
+    <div class="section-label reveal">counting down</div>
+    <h2 class="section-heading reveal">Until We Say <em>I Do</em></h2>
+    <div class="countdown-row reveal">
+      <div class="count-card">
+        <div class="count-leaf-wrap">
+          <svg class="count-leaf-svg" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55,5 Q95,5 105,55 Q95,105 55,105 Q15,105 5,55 Q15,5 55,5 Z" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.5"/>
+            <path d="M55,15 Q85,15 95,55 Q85,95 55,95 Q25,95 15,55 Q25,15 55,15 Z" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.3"/>
+          </svg>
+          <span class="count-num" id="days">00</span>
+        </div>
+        <span class="count-unit">Days</span>
+      </div>
+      <div class="count-sep">◇</div>
+      <div class="count-card">
+        <div class="count-leaf-wrap">
+          <svg class="count-leaf-svg" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55,5 Q95,5 105,55 Q95,105 55,105 Q15,105 5,55 Q15,5 55,5 Z" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.5"/>
+            <path d="M55,15 Q85,15 95,55 Q85,95 55,95 Q25,95 15,55 Q25,15 55,15 Z" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.3"/>
+          </svg>
+          <span class="count-num" id="hours">00</span>
+        </div>
+        <span class="count-unit">Hours</span>
+      </div>
+      <div class="count-sep">◇</div>
+      <div class="count-card">
+        <div class="count-leaf-wrap">
+          <svg class="count-leaf-svg" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55,5 Q95,5 105,55 Q95,105 55,105 Q15,105 5,55 Q15,5 55,5 Z" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.5"/>
+            <path d="M55,15 Q85,15 95,55 Q85,95 55,95 Q25,95 15,55 Q25,15 55,15 Z" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.3"/>
+          </svg>
+          <span class="count-num" id="minutes">00</span>
+        </div>
+        <span class="count-unit">Minutes</span>
+      </div>
+      <div class="count-sep">◇</div>
+      <div class="count-card">
+        <div class="count-leaf-wrap">
+          <svg class="count-leaf-svg" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55,5 Q95,5 105,55 Q95,105 55,105 Q15,105 5,55 Q15,5 55,5 Z" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.5"/>
+            <path d="M55,15 Q85,15 95,55 Q85,95 55,95 Q25,95 15,55 Q25,15 55,15 Z" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.3"/>
+          </svg>
+          <span class="count-num" id="seconds">00</span>
+        </div>
+        <span class="count-unit">Seconds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ VINE DIVIDER ░░ -->
+<div class="vine-divider vine-flip" aria-hidden="true">
+  <svg viewBox="0 0 1200 60" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 Q100,50 200,30 Q300,10 400,30 Q500,50 600,30 Q700,10 800,30 Q900,50 1000,30 Q1100,10 1200,30" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.3"/>
+    <g opacity="0.5">
+      <ellipse cx="200" cy="42" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(20 200 42)"/>
+      <ellipse cx="500" cy="18" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(-20 500 18)"/>
+      <ellipse cx="800" cy="42" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(20 800 42)"/>
+      <ellipse cx="1100" cy="18" rx="8" ry="14" fill="#7aab8a" opacity="0.3" transform="rotate(-20 1100 18)"/>
+      <circle cx="350" cy="30" r="3" fill="#f2c4ce" opacity="0.5"/>
+      <circle cx="650" cy="30" r="3" fill="#d4a853" opacity="0.5"/>
+      <circle cx="950" cy="30" r="3" fill="#f2c4ce" opacity="0.5"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ░░ STORY ░░ -->
+<section class="section-story" id="story">
+  <div class="section-inner">
+    <div class="section-label reveal">our story</div>
+    <h2 class="section-heading reveal">Two Hearts, One Path</h2>
+    <div class="story-cards">
+      <div class="story-card sc-left reveal">
+        <div class="sc-botanical">
+          <svg viewBox="0 0 120 120" width="90" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10,110 Q10,20 100,10" fill="none" stroke="#7aab8a" stroke-width="1.2" opacity="0.5"/>
+            <ellipse cx="65" cy="52" rx="14" ry="26" fill="#7aab8a" opacity="0.25" transform="rotate(-30 65 52)"/>
+            <ellipse cx="40" cy="78" rx="12" ry="22" fill="#7aab8a" opacity="0.2" transform="rotate(-50 40 78)"/>
+            <ellipse cx="88" cy="28" rx="10" ry="18" fill="#7aab8a" opacity="0.2" transform="rotate(-15 88 28)"/>
+            <circle cx="66" cy="34" r="6" fill="#f2c4ce" opacity="0.55"/>
+            <circle cx="40" cy="62" r="4.5" fill="#f2c4ce" opacity="0.45"/>
+            <circle cx="92" cy="16" r="4" fill="#d4a853" opacity="0.45"/>
+          </svg>
+        </div>
+        <div class="sc-content">
+          <p class="sc-quote">"Every love story is beautiful,<br>but ours is my favourite."</p>
+          <p class="sc-body">Two souls who found in each other a warmth that felt like home — a quiet certainty, a gentle joy, a love that grows richer with every passing season.</p>
+        </div>
+      </div>
+      <div class="story-card sc-right reveal">
+        <div class="sc-content">
+          <p class="sc-quote">"She is my today<br>and all of my tomorrows."</p>
+          <p class="sc-body">From the first glance to a lifetime of promises — Sajay and Amrusha begin their most beautiful chapter yet. We are overjoyed to share this moment with you.</p>
+        </div>
+        <div class="sc-botanical sc-botanical-r">
+          <svg viewBox="0 0 120 120" width="90" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)">
+            <path d="M10,110 Q10,20 100,10" fill="none" stroke="#7aab8a" stroke-width="1.2" opacity="0.5"/>
+            <ellipse cx="65" cy="52" rx="14" ry="26" fill="#7aab8a" opacity="0.25" transform="rotate(-30 65 52)"/>
+            <ellipse cx="40" cy="78" rx="12" ry="22" fill="#7aab8a" opacity="0.2" transform="rotate(-50 40 78)"/>
+            <ellipse cx="88" cy="28" rx="10" ry="18" fill="#7aab8a" opacity="0.2" transform="rotate(-15 88 28)"/>
+            <circle cx="66" cy="34" r="6" fill="#f2c4ce" opacity="0.55"/>
+            <circle cx="40" cy="62" r="4.5" fill="#f2c4ce" opacity="0.45"/>
+            <circle cx="92" cy="16" r="4" fill="#d4a853" opacity="0.45"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ VINE DIVIDER ░░ -->
+<div class="vine-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 60" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 Q100,10 200,30 Q300,50 400,30 Q500,10 600,30 Q700,50 800,30 Q900,10 1000,30 Q1100,50 1200,30" fill="none" stroke="#7aab8a" stroke-width="1" opacity="0.3"/>
+    <g>
+      <circle cx="600" cy="30" r="4" fill="#d4a853" opacity="0.4"/>
+      <circle cx="598" cy="30" r="8" fill="none" stroke="#d4a853" stroke-width="0.6" opacity="0.25"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ░░ DETAILS ░░ -->
+<section class="section-details" id="details">
+  <div class="section-inner">
+    <div class="section-label reveal">the celebration</div>
+    <h2 class="section-heading reveal">Wedding Details</h2>
+    <div class="details-grid reveal">
+
+      <div class="detail-card dc-date">
+        <div class="dc-icon">
+          <svg viewBox="0 0 64 64" width="52" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="16" width="48" height="42" rx="3" fill="none" stroke="#d4a853" stroke-width="1.2"/>
+            <line x1="8" y1="28" x2="56" y2="28" stroke="#d4a853" stroke-width="0.8" opacity="0.5"/>
+            <line x1="20" y1="8" x2="20" y2="24" stroke="#7aab8a" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="44" y1="8" x2="44" y2="24" stroke="#7aab8a" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="32" y="47" text-anchor="middle" font-family="Gilda Display" font-size="14" fill="#d4a853">29</text>
+          </svg>
+        </div>
+        <p class="dc-label">Date</p>
+        <p class="dc-value">Sunday, April 29</p>
+        <p class="dc-sub">2026</p>
+      </div>
+
+      <div class="detail-card dc-time">
+        <div class="dc-icon">
+          <svg viewBox="0 0 64 64" width="52" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="22" fill="none" stroke="#d4a853" stroke-width="1.2"/>
+            <circle cx="32" cy="32" r="17" fill="none" stroke="#7aab8a" stroke-width="0.5" opacity="0.4"/>
+            <line x1="32" y1="32" x2="32" y2="14" stroke="#d4a853" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="32" y1="32" x2="46" y2="40" stroke="#7aab8a" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="32" cy="32" r="2.5" fill="#d4a853"/>
+            <!-- tick marks -->
+            <line x1="32" y1="11" x2="32" y2="14" stroke="#d4a853" stroke-width="1" opacity="0.5"/>
+            <line x1="32" y1="50" x2="32" y2="53" stroke="#d4a853" stroke-width="1" opacity="0.5"/>
+            <line x1="11" y1="32" x2="14" y2="32" stroke="#d4a853" stroke-width="1" opacity="0.5"/>
+            <line x1="50" y1="32" x2="53" y2="32" stroke="#d4a853" stroke-width="1" opacity="0.5"/>
+          </svg>
+        </div>
+        <p class="dc-label">Time</p>
+        <p class="dc-value">07:30 AM</p>
+        <p class="dc-sub">Morning Ceremony</p>
+      </div>
+
+      <div class="detail-card dc-venue">
+        <div class="dc-icon">
+          <svg viewBox="0 0 64 64" width="52" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32,8 Q50,8 54,32 Q54,50 32,58 Q10,50 10,32 Q14,8 32,8 Z" fill="none" stroke="#d4a853" stroke-width="1.2"/>
+            <circle cx="32" cy="30" r="8" fill="none" stroke="#7aab8a" stroke-width="1"/>
+            <circle cx="32" cy="30" r="3" fill="#d4a853" opacity="0.7"/>
+            <line x1="32" y1="38" x2="32" y2="55" stroke="#d4a853" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <p class="dc-label">Venue</p>
+        <p class="dc-value">Ramalayam Temple</p>
+        <p class="dc-sub">Macherla, Andhra Pradesh</p>
+      </div>
+
+    </div>
+
+    <a href="https://maps.app.goo.gl/vDbwQfZkmTfJnNTk6" class="map-link" target="_blank" rel="noopener">
+      <span class="map-link-text">Open in Google Maps</span>
+      <span class="map-link-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ░░ GALLERY ░░ -->
+<section class="section-gallery" id="gallery">
+  <div class="section-inner">
+    <div class="section-label reveal">moments</div>
+    <h2 class="section-heading reveal">Together</h2>
+    <div class="gallery-wrap reveal">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-slide active"><img src="assets/images/photo1.jpeg" alt="Moment 1" loading="lazy"/></div>
+        <div class="gallery-slide"><img src="assets/images/photo2.jpeg" alt="Moment 2" loading="lazy"/></div>
+        <div class="gallery-slide"><img src="assets/images/photo3.jpeg" alt="Moment 3" loading="lazy"/></div>
+        <div class="gallery-slide"><img src="assets/images/photo4.jpeg" alt="Moment 4" loading="lazy"/></div>
+      </div>
+      <button class="g-btn g-prev" id="galleryPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="g-btn g-next" id="galleryNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <div class="gallery-dots">
+        <button class="gdot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="gdot" data-index="1" aria-label="Slide 2"></button>
+        <button class="gdot" data-index="2" aria-label="Slide 3"></button>
+        <button class="gdot" data-index="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ CLOSING ░░ -->
+<section class="section-closing" id="closing">
+  <div class="closing-moon-bg" aria-hidden="true"></div>
+
+  <!-- Full botanical wreath for closing -->
+  <div class="closing-wreath" aria-hidden="true">
+    <svg viewBox="0 0 500 500" width="420" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="wreathGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#7aab8a" stop-opacity="0.08"/>
+          <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="250" cy="250" r="220" fill="url(#wreathGlow)"/>
+      <!-- Wreath ring -->
+      <circle cx="250" cy="250" r="195" fill="none" stroke="#7aab8a" stroke-width="0.8" opacity="0.3" stroke-dasharray="6 12"/>
+      <circle cx="250" cy="250" r="215" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.2"/>
+      <!-- Leaves around wreath (simplified) -->
+      <g opacity="0.4">
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(0 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(20 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(40 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(60 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(80 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(100 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(120 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(140 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(160 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(180 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(200 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(220 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(240 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(260 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(280 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(300 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(320 250 250)"/>
+        <ellipse cx="250" cy="56" rx="9" ry="17" fill="#7aab8a" transform="rotate(340 250 250)"/>
+      </g>
+      <!-- Blossoms on wreath -->
+      <g opacity="0.6">
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(10 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(50 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(90 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(130 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(170 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(210 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(250 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(290 250 250)"/>
+        <circle cx="250" cy="56" r="5" fill="#f2c4ce" transform="rotate(330 250 250)"/>
+        <!-- Gold accent -->
+        <circle cx="250" cy="56" r="4" fill="#d4a853" transform="rotate(30 250 250)"/>
+        <circle cx="250" cy="56" r="4" fill="#d4a853" transform="rotate(110 250 250)"/>
+        <circle cx="250" cy="56" r="4" fill="#d4a853" transform="rotate(190 250 250)"/>
+        <circle cx="250" cy="56" r="4" fill="#d4a853" transform="rotate(270 250 250)"/>
+        <circle cx="250" cy="56" r="4" fill="#d4a853" transform="rotate(350 250 250)"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="closing-inner reveal">
+    <p class="closing-eyebrow">With love &amp; blessings</p>
+    <h2 class="closing-names">Sajay <em>&amp;</em> Amrusha</h2>
+    <p class="closing-date">April 29, 2026 · Macherla</p>
+    <div class="closing-divider">
+      <svg viewBox="0 0 240 20" width="200" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="10" x2="100" y2="10" stroke="#7aab8a" stroke-width="0.7" opacity="0.4"/>
+        <circle cx="120" cy="10" r="3" fill="#d4a853" opacity="0.6"/>
+        <circle cx="110" cy="10" r="1.5" fill="#7aab8a" opacity="0.4"/>
+        <circle cx="130" cy="10" r="1.5" fill="#7aab8a" opacity="0.4"/>
+        <line x1="140" y1="10" x2="240" y2="10" stroke="#7aab8a" stroke-width="0.7" opacity="0.4"/>
+      </svg>
+    </div>
+    <p class="closing-blessing">May your love bloom like a garden — wild, tender, and everlasting.</p>
+  </div>
+</section>
+
+<!-- ░░ MUSIC ░░ -->
+<button id="music-btn" aria-label="Toggle music">
+  <svg id="icon-play"  viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none"><path d="M8 5v14l11-7z"/></svg>
+  <svg id="icon-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+</button>
+<audio id="bg-music" src="assets/audio/song.mp3" loop preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
